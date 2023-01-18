@@ -1,0 +1,138 @@
+// -------fonts--------->
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+
+// ------ primary colors----------->
+
+$mycolor: red;
+$softviolet: hsl(277, 64%, 61%);
+$darksaturatedblue: hsl(244, 38%, 16%);
+$mainbackground: hsl(233, 47%, 7%);
+
+//--------- neutral colors------------>
+
+$white: hsl(0, 0%, 100%);
+$mainpara: hsla(0, 0%, 100%, 0.75);
+$statheading: hsla(0, 0%, 100%, 0.6);
+$fs14: 15px;
+
+$interfont: "Inter", sans-serif;
+$deca: "Lexend Deca", sans-serif;
+
+// --------styling--------->
+
+body {
+  background-color: $mainbackground;
+}
+
+// -----------containers--------->
+
+.container {
+  height: 420px;
+  max-width: 950px;
+  background-color: white;
+  position: relative;
+  margin: 8% auto;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+}
+
+.left__content {
+  background-color: $darksaturatedblue;
+  flex: 50%;
+  background-color: $darksaturatedblue;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+}
+
+.insights {
+  color: $softviolet;
+}
+
+h1 {
+  font-family: $interfont;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.right__content {
+  flex: 50%;
+  object-fit: fill;
+  display: flex;
+
+  height: auto;
+}
+
+.img {
+  width: 100%;
+  object-fit: fill;
+  height: auto;
+  padding: 0;
+}
+
+p {
+  color: $statheading;
+  font-family: $deca;
+  font-size: 14px;
+  word-spacing: 0.2rem;
+  line-height: 2rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin: 12% 0 2% 0;
+  flex-direction: row;
+  row-gap: 20px;
+  max-width: 90%;
+}
+
+.stats > .stats__content > h1 {
+  font-size: 18px;
+  font-family: $interfont;
+  font-family: $interfont;
+  text-transform: uppercase;
+}
+
+.stats > .stats__content > p {
+  font-size: 11px;
+  font-family: $interfont;
+  text-transform: uppercase;
+  margin-top: -10px;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    height: 800px;
+    width: 380px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    padding: 0;
+  }
+  .stats {
+    flex-direction: column;
+    text-align: center;
+  }
+  p,
+  h1 {
+    text-align: center;
+  }
+  .left__content {
+    flex: 30%;
+  }
+  .right__content {
+    flex: 50%;
+  }
+}
