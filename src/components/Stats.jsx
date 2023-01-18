@@ -36,10 +36,7 @@ function Stats() {
         </div>
       </div>
       <div className={styles.right__content}>
-        <picture>
-          <source media="(min-width:375px )" srcset={mobile} />
-          <img src={groupimage} alt="img" className="img" />
-        </picture>
+        <img src={groupimage} alt="img" className="img" />
       </div>
     </div>
   );
