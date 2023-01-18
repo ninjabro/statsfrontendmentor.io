@@ -88,7 +88,7 @@ p {
   justify-content: space-between;
   margin: 12% 0 2% 0;
   flex-direction: row;
-  row-gap: 20px;
+  // row-gap: 20px;
   max-width: 90%;
 }
 
@@ -106,10 +106,10 @@ p {
   margin-top: -10px;
 }
 
-@media screen and (min-width: 375px) {
+@media (min-width: 375px) and (max-width: 450px) {
   .container {
-    height: 800px;
-    width: 380px;
+    height: 750px;
+    width: 350px;
     display: flex;
     flex-direction: column-reverse;
     overflow: hidden;
@@ -121,10 +121,13 @@ p {
     height: auto;
     padding: 0;
   }
+
   .stats {
     flex-direction: column;
     text-align: center;
+    column-gap: 5px;
   }
+
   p,
   h1 {
     text-align: center;
