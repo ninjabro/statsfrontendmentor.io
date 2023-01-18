@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./stats.module.scss";
 import groupimage from "../images/image-header-desktop.jpg";
-import mobile from "../images/image-header-mobile.jpg";
 
 function Stats() {
   return (
