@@ -87,7 +87,7 @@ p {
 .stats {
   display: flex;
   justify-content: space-between;
-  margin: 5% 0 2% 0;
+  margin: 1% 0 2% 0;
   flex-direction: row;
   row-gap: 15px;
   max-width: 90%;
@@ -135,6 +135,9 @@ p {
   p {
     font-size: 1rem;
     line-height: normal;
+  }
+  h1 {
+    font-size: 2rem;
   }
   p,
   h1 {
