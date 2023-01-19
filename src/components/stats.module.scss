@@ -32,7 +32,7 @@ body {
 .container {
   height: 420px;
   max-width: 950px;
-  background-color: white;
+
   position: relative;
   margin: 8% auto;
   display: flex;
@@ -57,24 +57,22 @@ body {
 h1 {
   font-family: $interfont;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
 }
 
 .right__content {
   flex: 50%;
-  object-fit: fill;
-  display: flex;
 
-  height: auto;
+  display: flex;
 }
 
-.img {
+.right__content > picture > img {
   width: 100%;
+  max-width: 475px;
+  height: 100%;
   object-fit: cover;
-  height: auto;
-  padding: 0;
-  height: auto;
+  max-height: 420px;
 }
 
 p {
@@ -83,19 +81,20 @@ p {
   font-size: 14px;
   word-spacing: 0.2rem;
   line-height: 2rem;
+  white-space: pre-wrap;
 }
 
 .stats {
   display: flex;
   justify-content: space-between;
-  margin: 12% 0 2% 0;
+  margin: 5% 0 2% 0;
   flex-direction: row;
-  row-gap: 20px;
+  row-gap: 15px;
   max-width: 90%;
 }
 
 .stats > .stats__content > h1 {
-  font-size: 18px;
+  font-size: 16px;
   font-family: $interfont;
   font-family: $interfont;
   text-transform: uppercase;
@@ -108,7 +107,9 @@ p {
   margin-top: -10px;
 }
 
-@media (min-width: 375px) and (max-width: 500px) {
+// --------mbile responsive----->
+
+@media (max-width: 475px) {
   .container {
     height: 750px;
     width: 350px;
@@ -116,12 +117,14 @@ p {
     flex-direction: column-reverse;
     overflow: hidden;
     border-radius: 10px;
+    border: none;
   }
+
   .img {
-    width: 100%;
+    width: 50%;
+    max-width: 120px;
     object-fit: cover;
-    height: auto;
-    padding: 0;
+    height: 350px;
   }
 
   .stats {
@@ -129,7 +132,10 @@ p {
     text-align: center;
     column-gap: 5px;
   }
-
+  p {
+    font-size: 1rem;
+    line-height: normal;
+  }
   p,
   h1 {
     text-align: center;
@@ -140,7 +146,7 @@ p {
   }
   .right__content {
     flex: 20%;
-    background-image: url("../images/image-header-mobile.jpg");
+
     object-fit: cover;
   }
 }
